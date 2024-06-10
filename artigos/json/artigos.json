@@ -1,0 +1,32 @@
+[
+    {
+        "titulo": "A Importância da Educação",
+        "texto": "Este artigo discute a importância da educação na sociedade moderna.",
+        "autor": "João Silva"
+    },
+    {
+        "titulo": "Inovação Tecnológica: Desafios e Oportunidades",
+        "texto": "Este artigo aborda os desafios e oportunidades da inovação tecnológica no mundo atual.",
+        "autor": "João Silva"
+    },
+    {
+        "titulo": "Sustentabilidade Ambiental",
+        "texto": "Neste artigo, são discutidas estratégias para promover a sustentabilidade ambiental.",
+        "autor": "Maria Santos"
+    },
+    {
+        "titulo": "Impacto das Mudanças Climáticas",
+        "texto": "Este artigo analisa o impacto das mudanças climáticas na biodiversidade.",
+        "autor": "Maria Santos"
+    },
+    {
+        "titulo": "Literatura Contemporânea",
+        "texto": "Neste artigo, são exploradas as tendências da literatura contemporânea.",
+        "autor": "Carlos Oliveira"
+    },
+    {
+        "titulo": "O Papel do Artista na Sociedade",
+        "texto": "Este artigo reflete sobre o papel do artista na formação da cultura e da identidade social.",
+        "autor": "Carlos Oliveira"
+    }
+]

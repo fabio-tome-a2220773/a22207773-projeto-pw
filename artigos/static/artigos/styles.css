@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+header h1 {
+    display: inline;
+    margin-left: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button, header a {
+    margin-right: 20px;
+}
+
+.nav {
+    margin-top: 20px;
+    background-color: #343a40;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav a {
+    color: white;
+    margin: 0 10px;
+}
+
+.nav a:hover {
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #343a40;
+}
+
+.list-group-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.list-group-item h5 {
+    margin: 0;
+    padding: 0;
+    color: #007bff;
+}
+
+.list-group-item p {
+    margin: 5px 0 10px;
+}
+
+.btn-primary, .btn-danger, .btn-secondary {
+    margin: 0 5px;
+}
+
+.btn-primary:hover, .btn-danger:hover, .btn-secondary:hover {
+    opacity: 0.8;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    margin-top: 10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me By Me</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/mebyme_styles.css' %}">
+    <script src="{% static 'portfolio/js/mebyme_scripts.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-actions">
+                <li>
+                    <a href="{% url 'portfolio:landing_page' %}" class="btn-back">
+                        <img src="{% static 'portfolio/images/back_icon.png' %}" alt="Back" class="back-image">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="sidebar">
+            <div class="profile">
+                <img src="{% static 'portfolio/images/profile_image.JPG' %}" alt="Fábio Tomé">
+                <h2>Fábio Tomé</h2>
+                <p>Data de nascimento: 10/03/2004</p>
+                <p>Nacionalidade: Portuguesa</p>
+                <p>Sexo: Masculino</p>
+            </div>
+            <div class="contact">
+                <h3>CONTACTO</h3>
+                <p>Moinhos da Funcheira,<br>  Lisboa, Portugal</p>
+                <p><a href="mailto:fabio.tomee@gmail.com">fabio.tomee@gmail.com</a></p>
+                <p><a href="tel:+351935461805">(+351) 935461805</a></p>
+                <p><a href="https://www.instagram.com/fabiojtome/" target="_blank">Instagram</a></p>
+            </div>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </section>
+        <section class="main-content">
+            <div class="section">
+                <h2>Sobre Mim</h2>
+                <p>Sou estudante de Informática e Gestão, atualmente estou a tirar o curso na Universidade Lusófona. Tenho muito gosto nas áreas de vendas e gestão, pois sempre apreciei os negócios e a interação com pessoas. Sou uma pessoa organizada, trabalho em equipa e consigo trabalhar bem sob pressão.</p>
+            </div>
+            <div class="section">
+                <h2>Educação e Formação</h2>
+                <p>Lisboa, Portugal</p>
+                <p><strong>Informática de Gestão Universidade Lusófona</strong></p>
+                <p>Endereço: Campo Grande 376, 1749-024 Lisboa, Lisboa, Portugal</p>
+            </div>
+            <div class="section">
+                <h2>Experiência Profissional</h2>
+                <p><strong>01/05/2022 – 29/07/2022</strong> Lisboa, Portugal</p>
+                <p>Vendedor de fruta Marl</p>
+                <ul>
+                    <li>Relação com clientes</li>
+                    <li>Organização e disposição da loja</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Competências Linguísticas</h2>
+                <p><strong>Língua(s) Materna(s):</strong> Português</p>
+                <p><strong>Outra(s) Língua(s):</strong> Inglês</p>
+                <ul>
+                    <li>Compreensão oral: C1</li>
+                    <li>Leitura: C1</li>
+                    <li>Produção oral: B1</li>
+                    <li>Interação oral: B2</li>
+                    <li>Escrever: B2</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Competências Digitais</h2>
+                <p>Microsoft Office | Redes Sociais | Facilidade de Aprendizagem de Novos Softwares | Conhecimento básico em C#, Java, Kotlin, Python | Gosto pelo trabalho em equipa</p>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

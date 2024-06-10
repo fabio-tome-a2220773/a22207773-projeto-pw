@@ -1,0 +1,26 @@
+{% extends 'LIG/layout.html' %}
+
+{% block title %}Detalhes da Disciplina{% endblock %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>{{ disciplina.nome }}</h2>
+<p><strong>Ano:</strong> {{ disciplina.ano }}</p>
+<p><strong>Semestre:</strong> {{ disciplina.semestre }}</p>
+<p><strong>ECTS:</strong> {{ disciplina.ects }}</p>
+<p><strong>Área Científica:</strong> {{ disciplina.area_cientifica.nome }}</p>
+
+<ul>
+    {% for docente in docentes %}
+        <li>{{ docente.nome }}</li>
+    {% endfor %}
+</ul>
+
+{% if projeto %}
+    <h3>Projeto</h3>
+    <p><a href="{% url 'LIG:projeto_detail' projeto.id %}">Ver detalhes do projeto</a></p>
+{% endif %}
+<a href="{% url 'LIG:index' %}">Voltar</a>
+{% endblock %}
+
+

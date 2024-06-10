@@ -1,0 +1,15 @@
+<!-- LIG/templates/LIG/disciplinas_list.html -->
+{% extends 'LIG/layout.html' %}
+
+{% block title %}Lista de Disciplinas{% endblock %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Lista de Disciplinas</h2>
+<ul>
+    {% for disciplina in disciplinas %}
+        <li><a href="{% url 'LIG:disciplina_detail' disciplina.id %}">{{ disciplina.nome }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'LIG:index' %}">Voltar</a>
+{% endblock %}

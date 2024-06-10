@@ -1,0 +1,66 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="bandas-list">
+        <h2>Bandas</h2>
+        <ul>
+            {% for banda in bandas %}
+                <li>
+                    <a href="{% url 'bandas:banda' banda.id %}">{{ banda.nome }}</a>
+                    <span class="edit-delete">
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'bandas:banda_update' banda.id %}" style="color: lightblue;">Editar</a>
+                            <a href="{% url 'bandas:banda_delete' banda.id %}" style="color: red;">Apagar</a>
+                        {% endif %}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'bandas:banda_create' %}"><button>Inserir nova Banda</button></a>
+        {% endif %}
+    </div>
+    <style>
+        .bandas-list {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .bandas-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .bandas-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .bandas-list .edit-delete {
+            margin-left: auto;
+        }
+        .bandas-list a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .bandas-list a:hover {
+            color: #1DB954;
+        }
+        .bandas-list button {
+            background-color: #1DB954;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .bandas-list button:hover {
+            background-color: #1ed760;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,45 @@
+{
+  "cidade": "Lisboa",
+  "previsoes": [
+    {
+      "data": "2024-06-11",
+      "temperatura_minima": 17,
+      "temperatura_maxima": 24,
+      "descricao_tempo": "Parcialmente Nublado",
+      "precipitacao": "10%",
+      "icone_tempo": "http://example.com/icons/partly-cloudy.svg"
+    },
+    {
+      "data": "2024-06-12",
+      "temperatura_minima": 16,
+      "temperatura_maxima": 23,
+      "descricao_tempo": "Chuvoso",
+      "precipitacao": "60%",
+      "icone_tempo": "http://example.com/icons/rainy.svg"
+    },
+    {
+      "data": "2024-06-13",
+      "temperatura_minima": 15,
+      "temperatura_maxima": 22,
+      "descricao_tempo": "Nublado",
+      "precipitacao": "30%",
+      "icone_tempo": "http://example.com/icons/cloudy.svg"
+    },
+    {
+      "data": "2024-06-14",
+      "temperatura_minima": 16,
+      "temperatura_maxima": 24,
+      "descricao_tempo": "Ensolarado",
+      "precipitacao": "5%",
+      "icone_tempo": "http://example.com/icons/sunny.svg"
+    },
+    {
+      "data": "2024-06-15",
+      "temperatura_minima": 18,
+      "temperatura_maxima": 26,
+      "descricao_tempo": "Parcialmente Nublado",
+      "precipitacao": "20%",
+      "icone_tempo": "http://example.com/icons/partly-cloudy.svg"
+    }
+  ]
+}

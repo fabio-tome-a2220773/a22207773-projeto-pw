@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial de Meteorologia</title>
+    <link rel="stylesheet" href="{% static 'meteo/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Aplicação de Meteorologia</h1>
+    </header>
+    <div class="container">
+        <p>Para ver a previsão do tempo para Lisboa, clique <a href="{% url 'meteo:lisbon_weather' %}">aqui</a>.</p>
+        <p>Para ver a previsão do tempo para os próximos 5 dias, clique <a href="{% url 'meteo:weather_forecast' %}">aqui</a>.</p>
+
+
+    </div>
+</body>
+</html>

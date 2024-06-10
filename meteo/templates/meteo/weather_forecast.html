@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Previsão do Tempo para os Próximos 5 Dias</title>
+    <link rel="stylesheet" href="{% static 'meteo/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>O Tempo nos Próximos 5 Dias</h1>
+    </header>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <label for="city">Selecione uma cidade:</label>
+            <select name="city" id="city">
+                {% for city in cities %}
+                    <option value="{{ city.globalIdLocal }}">{{ city.local }}</option>
+                {% endfor %}
+            </select>
+            <label for="date">Selecione uma data:</label>
+            <input type="date" name="date" id="date">
+            <input type="submit" value="Obter Previsão">
+        </form>
+
+        {% if selected_city and selected_date %}
+            <h2>Previsão do Tempo para {{ selected_city.local }} em {{ selected_date }}</h2>
+            {% if forecast_for_selected_date %}
+                <ul>
+                    <li>
+                        <strong>Data:</strong> {{ forecast_for_selected_date.forecastDate }}<br>
+                        <strong>Temperatura Mínima:</strong> {{ forecast_for_selected_date.tMin }}°C<br>
+                        <strong>Temperatura Máxima:</strong> {{ forecast_for_selected_date.tMax }}°C<br>
+                        <strong>Descrição do Tempo:</strong> {{ forecast_for_selected_date.weatherDescription }}<br>
+                        <img src="{{ forecast_for_selected_date.icon_url }}" alt="Ícone do Tempo">
+                    </li>
+                </ul>
+            {% else %}
+                <p>Não foi possível obter os dados do tempo para a data selecionada.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>

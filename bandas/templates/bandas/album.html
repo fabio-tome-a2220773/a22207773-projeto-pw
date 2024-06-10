@@ -1,0 +1,73 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="album-details">
+        <h2>{{ album.titulo }}</h2>
+        <p>Ano de Lançamento: {{ album.ano_lancamento }}</p>
+        {% if album.foto %}
+            <p><img src="{{ album.foto.url }}" alt="Foto do álbum"></p>
+        {% else %}
+            <p>Foto do álbum não disponível</p>
+        {% endif %}
+
+        <h3>Músicas:</h3>
+        <ul>
+            {% for musica in album.musicas_set.all %}
+                <li>
+                    {{ musica.titulo }} - Duração: {{ musica.duracao }}
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'bandas:musica_update' musica.id %}">Editar</a>
+                        <a href="{% url 'bandas:musica_delete' musica.id %}">Apagar</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'bandas:banda' album.banda.id %}">Voltar para Banda</a>
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'bandas:musica_create' %}?album_id={{ album.id }}"><button>Inserir nova Música</button></a>
+        {% endif %}
+    </div>
+    <style>
+        .album-details {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .album-details img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .album-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .album-details li {
+            margin-bottom: 10px;
+        }
+        .album-details a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .album-details a:hover {
+            color: #1DB954;
+        }
+        .album-details button {
+            background-color: #1DB954;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .album-details button:hover {
+            background-color: #1ed760;
+        }
+    </style>
+{% endblock %}

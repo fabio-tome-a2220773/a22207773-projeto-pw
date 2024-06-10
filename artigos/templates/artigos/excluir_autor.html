@@ -1,0 +1,11 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+    <h2>Excluir Autor</h2>
+    <p>Você tem certeza que deseja excluir o autor {{ autor.nome }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a href="{% url 'artigos:autores' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

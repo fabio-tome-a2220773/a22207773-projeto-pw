@@ -1,0 +1,19 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>Autores</h2>
+    <ul class="list-group">
+        {% for autor in autores %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{% url 'artigos:autor_detalhes' autor.id %}">{{ autor.nome }}</a>
+                {% if request.user.is_authenticated %}
+                    <span>
+                        <a href="{% url 'artigos:editar_autor' autor.id %}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{% url 'artigos:excluir_autor' autor.id %}" class="btn btn-sm btn-danger">Excluir</a>
+                    </span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
+    <script src="{% static 'portfolio/js/scripts.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main">
+            <ul class="nav-actions">
+                <li>
+                    <a href="{% url 'autenticacao:login' %}" class="btn-login">
+                        <img src="{% static 'portfolio/images/login_image.png' %}" alt="Login" class="login-image">
+                    </a>
+                </li>
+                <ul class="nav-links">
+                    <li><a href="{% url 'portfolio:mebyme' %}">MeByMe</a></li>
+                    <li><a href="{% url 'portfolio:mebyme_tech' %}">WebSite</a></li>
+                    <li><a href="{% url 'meteo:home' %}">Metereologia</a></li>
+                </ul>
+                    <li class="weather-icon">
+                        <img src="{{ icon_url }}" alt="Ícone do Tempo" style="width: 60px; height: 60px;">
+                    </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="background: url('{% static 'portfolio/images/praia.jpg' %}') no-repeat center center/cover;">
+            <div class="hero-text">
+                <h1 class="portfolio-heading">Bem-vindo ao Meu Portfolio</h1>
+                <div class="hero-buttons">
+                    <a href="{% url 'bandas:bandas_list' %}" class="btn-primary">Bandas</a>
+                    <a href="{% url 'LIG:index' %}" class="btn-secondary">Curso</a>
+                    <a href="{% url 'artigos:layout' %}" class="btn-terceiro">Artigos</a>
+                </div>
+            </div>
+        </section>
+        <div id="weather-icon"></div>
+        <div id="date-time"></div>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </main>
+</body>
+</html>

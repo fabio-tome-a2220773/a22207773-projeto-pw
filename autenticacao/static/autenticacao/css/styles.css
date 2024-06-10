@@ -1,0 +1,158 @@
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #4CAF50, #81C784);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+.form-container h3 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+}
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #388E3C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #2E7D32;
+}
+.form-container a button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00796B;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+.form-container a button:hover {
+    background-color: #004D40;
+}
+
+/* CSS para registo.html */
+.registration-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+.registration-form h3 {
+    text-align: center;
+    color: #00796B;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+}
+.registration-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00796B;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.registration-form input[type="submit"]:hover {
+    background-color: #004D40;
+}
+
+/* CSS para user.html */
+.user-info {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+.user-info h3 {
+    text-align: center;
+    color: #00796B;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+.user-info .info-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.user-info .info-section h4 {
+    color: #00796B;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.user-info .info-section ul {
+    list-style: none;
+    padding: 0;
+}
+.user-info .info-section li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.edit-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.edit-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: #00796B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.edit-links a:hover {
+    background-color: #004D40;
+}

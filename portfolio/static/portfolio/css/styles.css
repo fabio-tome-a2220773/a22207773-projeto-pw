@@ -1,0 +1,214 @@
+/* static/portfolio/css/styles.css */
+
+/* Variáveis para cores */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #28a745;
+    --terceiro-color: #dc3545;
+    --background-color: #f4f4f4;
+    --dark-background-color: #333;
+    --text-color: #333;
+    --dark-text-color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Adiciona espaçamento à direita para empurrar os ícones de login e clima */
+}
+
+nav ul.nav-links li {
+    margin: 0 1rem;
+}
+
+nav ul.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul.nav-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Garante que as ações de navegação estão à direita */
+}
+
+nav ul.nav-actions li {
+    margin-left: 1rem;
+}
+
+.weather-icon img {
+    width: 20px; /* Reduz o tamanho do ícone do clima */
+    height: 20px; /* Reduz o tamanho do ícone do clima */
+    display: block;
+    margin-left: auto; /* Move o ícone para a direita */
+}
+
+.btn-login img.login-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-login img.login-image:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1.portfolio-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+    color: black;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary, .btn-secondary, .btn-terceiro {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: darken(var(--secondary-color), 10%);
+}
+
+.btn-terceiro {
+    background: var(--terceiro-color);
+}
+
+.btn-terceiro:hover {
+    background: darken(var(--terceiro-color), 10%);
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--dark-background-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+body.dark-mode {
+    background: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode header {
+    background: #555;
+    color: var(--dark-text-color);
+}
+
+body.dark-mode nav ul.nav-links li a {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode nav ul.nav-links li a:hover {
+    color: #ddd;
+}
+
+body.dark-mode .hero {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .hero-text {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode #date-time {
+    color: var(--dark-text-color);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

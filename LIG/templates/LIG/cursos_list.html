@@ -1,0 +1,21 @@
+{% extends 'LIG/layout.html' %}
+
+{% block title %}Lista de Cursos{% endblock %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Lista de Cursos</h2>
+<ul>
+    {% for curso in cursos %}
+        <li><a href="{% url 'LIG:curso_detail' curso.id %}">{{ curso.nome }}</a></li>
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'LIG:edita_curso' curso.id %}"><button>Editar</button></a>
+            <a href="{% url 'LIG:apaga_curso' curso.id %}" onclick="return confirm('Tem certeza que deseja apagar este curso?');"><button>Apagar</button></a>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% if request.user.is_authenticated %}
+    <a href="{% url 'LIG:novo_curso' %}"><button>Adicionar Novo Curso</button></a>
+{% endif %}
+<a href="{% url 'LIG:index' %}">Voltar</a>
+{% endblock %}

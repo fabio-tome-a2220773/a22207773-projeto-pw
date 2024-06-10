@@ -1,0 +1,22 @@
+{% extends 'LIG/layout.html' %}
+
+{% block content %}
+    <h3>Edita curso</h3>
+
+    <form action="{% url 'LIG:edita_curso' curso.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Guardar">
+    </form>
+
+    <a href="{% url 'LIG:index' curso.id %}">
+      <button>Cancelar</button>
+    </a>
+
+    <a href="{% url 'LIG:apaga_curso' curso.id %}">
+      <button>Apaga o Curso</button>
+    </a>
+
+
+
+{% endblock %}

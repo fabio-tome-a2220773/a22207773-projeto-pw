@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologias Aplicadas</title>
+    <link rel="stylesheet" href="{% static 'portfolio/css/mebyme_tech_styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-actions">
+                <li>
+                    <a href="{% url 'portfolio:landing_page' %}" class="btn-back">
+                        <img src="{% static 'portfolio/images/back_icon.png' %}" alt="Back" class="back-image">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero" style="background: url('{% static 'portfolio/images/praia.jpg' %}') no-repeat center center/cover;">
+            <div class="overlay"></div>
+            <section class="main-content">
+                <div class="section">
+                    <h2>Tecnologias Utilizadas</h2>
+                    <ul>
+                        <li><strong>Django:</strong> Framework web em Python usado para desenvolver o site.</li>
+                        <li><strong>HTML e CSS:</strong> Linguagens básicas para estrutura e estilo do site.</li>
+                        <li><strong>JavaScript:</strong> Usado para interatividade, como o botão de alternar o modo escuro.</li>
+                        <li><strong>Python:</strong> Linguagem de programação utilizada com Django para criar a lógica de backend do site.</li>
+                        <li><strong>Git:</strong> Sistema de controle de versão para colaboração e controle de código-fonte.</li>
+                        <li><strong>GitHub:</strong> Plataforma de hospedagem de código-fonte para o projeto.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Estrutura do Projeto</h2>
+                    <p>O projeto segue a estrutura padrão do Django, com os seguintes diretórios e componentes principais:</p>
+                    <ul>
+                        <li><strong>portfolio:</strong> Aplicação principal que contém as configurações do Django e as views.</li>
+                        <li><strong>models:</strong> Definição das estruturas de dados e a interação com o banco de dados.</li>
+                        <li><strong>views:</strong> Funções que gerenciam a lógica do aplicativo e retornam as respostas HTML.</li>
+                        <li><strong>urls:</strong> Sistema de roteamento que direciona as URLs para as views correspondentes.</li>
+                        <li><strong>loader:</strong> Funções ou classes usadas para carregar dados iniciais ou arquivos específicos.</li>
+                        <li><strong>json:</strong> Utilizado para trabalhar com dados no formato JSON, especialmente em APIs e troca de dados assíncronos.</li>
+                        <li><strong>static:</strong> Diretório para arquivos estáticos, como CSS, JS e imagens.</li>
+                        <li><strong>templates:</strong> Diretório para os templates HTML usados no site.</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

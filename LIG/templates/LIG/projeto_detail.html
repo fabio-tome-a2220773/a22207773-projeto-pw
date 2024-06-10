@@ -1,0 +1,22 @@
+{% extends 'LIG/layout.html' %}
+
+{% block title %}Detalhes do Projeto{% endblock %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Projeto da Disciplina {{ projeto.disciplina.nome }}</h2>
+<p><strong>Descrição:</strong> {{ projeto.descricao }}</p>
+<p><strong>Conceitos Aplicados:</strong> {{ projeto.conceitos_aplicados }}</p>
+<p><strong>Tecnologias Utilizadas:</strong> {{ projeto.tecnologias_utilizadas }}</p>
+{% if projeto.imagem %}
+    <p><strong>Imagem:</strong><br>
+    <img src="{{ projeto.imagem.url }}" alt="Imagem do Projeto"></p>
+{% endif %}
+{% if projeto.video_youtube %}
+    <p><strong>Vídeo:</strong> <a href="{{ projeto.video_youtube }}" target="_blank">Ver Vídeo no YouTube</a></p>
+{% endif %}
+{% if projeto.repositorio_github %}
+    <p><strong>Repositório no GitHub:</strong> <a href="{{ projeto.repositorio_github }}" target="_blank">{{ projeto.repositorio_github }}</a></p>
+{% endif %}
+<a href="{% url 'LIG:disciplina_detail' projeto.disciplina.id %}">Voltar</a>
+{% endblock %}

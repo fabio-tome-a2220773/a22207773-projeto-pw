@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusofona</title>
+    <style>
+        body {
+            background: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informática de Gestão:</h1>
+    </header>
+
+    <main>
+        <h2>Semestres 2023/2024:</h2>
+        <ul>
+            <li>
+            <strong>1º Semestre:</strong>
+                <nav>
+                    <a href="{% url 'novaapp:semestre1' %}">Aqui</a>
+                </nav>
+            </li>
+            <li>
+            <strong>2º Semestre:</strong>
+                <nav>
+                    <a href="{% url 'novaapp:semestre2' %}">Aqui</a>
+                </nav>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy;Programação Web, Universidade Lusófona</p>
+        <p>Criado por Fábio Tomé.</p>
+    </footer>
+
+</body>
+</html>

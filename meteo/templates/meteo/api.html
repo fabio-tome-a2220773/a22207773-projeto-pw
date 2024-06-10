@@ -1,0 +1,43 @@
+<!-- api.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha API Meteorológica</title>
+</head>
+<body>
+    <h1>Minha API Meteorológica</h1>
+
+    <h2>Lista de Cidades:</h2>
+    <div id="cidades"></div>
+
+    <h2>Previsão Meteorológica de Hoje para Lisboa:</h2>
+    <div id="previsao_hoje"></div>
+
+    <h2>Previsão Meteorológica para os Próximos 5 Dias para Lisboa:</h2>
+    <div id="previsao_5_dias"></div>
+
+    <script>
+        // Função para fazer requisição AJAX e exibir os resultados
+        function mostrarDados(endpoint, containerId) {
+            fetch(endpoint)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById(containerId).innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Erro ao buscar dados:', error));
+        }
+
+        // Mostrar lista de cidades
+        mostrarDados('/api/cidades/', 'cidades');
+
+        // Mostrar previsão de hoje
+        mostrarDados('/api/weather/today/1/', 'previsao_hoje'); // Supondo que Lisboa tem ID 1
+
+        // Mostrar previsão para os próximos 5 dias
+        mostrarDados('/api/weather/forecast/1/', 'previsao_5_dias'); // Supondo que Lisboa tem ID 1
+    </script>
+</body>
+</html>

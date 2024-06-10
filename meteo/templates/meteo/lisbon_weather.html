@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Previsão do Tempo em Lisboa</title>
+    <link rel="stylesheet" href="{% static 'meteo/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Lisboa</h1>
+        <h2>23°</h2>
+        <p>Nublado</p>
+    </header>
+    <div class="container weather-info">
+        {% if weather_info %}
+            <div>
+                <p><strong>Máx.:</strong> {{ weather_info.max_temp }}°C</p>
+                <p><strong>Mín.:</strong> {{ weather_info.min_temp }}°C</p>
+            </div>
+            <div class="weather-details">
+                <p>Nublado até ao fim do dia. Rajadas de vento de até 30 km/h.</p>
+            </div>
+            <img class="weather-icon" src="{{ weather_info.icon_url }}" alt="Ícone do Tempo">
+        {% else %}
+            <p>Não foi possível obter os dados do tempo.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

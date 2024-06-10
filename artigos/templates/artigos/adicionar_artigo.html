@@ -1,0 +1,10 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+    <h2>Adicionar Artigo</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+    </form>
+{% endblock %}

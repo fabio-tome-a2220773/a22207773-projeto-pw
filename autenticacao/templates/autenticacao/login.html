@@ -1,0 +1,24 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'autenticacao/css/styles.css' %}">
+</head>
+<div class="form-container">
+    <h3>Login</h3>
+    {% if mensagem %}
+        <p>mensagem: {{ mensagem }}</p>
+    {% endif %}
+    <form action="{% url 'autenticacao:login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username..">
+        <input type="password" name="password" placeholder="Palavra-chave..">
+        <input type="submit" value="Entrar">
+    </form>
+    <div class="auth-links">
+        <a href="{% url 'autenticacao:registo' %}">
+            <button>Registar</button>
+        </a>
+        <a href="{% url 'autenticacao:reset_password' %}">
+            <button>Recuperar Palavra-chave</button>
+        </a>
+    </div>
+</div>

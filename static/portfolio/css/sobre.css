@@ -1,0 +1,45 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o cabeçalho */
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Estilos para o texto */
+p, h2 {
+    color: #fff;
+    text-align: center;
+}
+
+/* Estilos para a seção com efeito parallax */
+.parallax {
+    background-image: url('{% static 'portfolio/images/praia.jpg' %}');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o botão de voltar */
+.btn-back {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+

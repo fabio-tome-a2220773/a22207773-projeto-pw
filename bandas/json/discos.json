@@ -1,0 +1,92 @@
+[
+  {
+    "titulo": "Led Zeppelin IV",
+    "ano_lancamento": 1971,
+    "banda": "Led Zeppelin",
+    "musicas": [
+      {"titulo": "Stairway to Heaven", "duracao": "8:02"},
+      {"titulo": "Black Dog", "duracao": "4:55"},
+      {"titulo": "Rock and Roll", "duracao": "3:40"}
+    ]
+  },
+  {
+    "titulo": "Abbey Road",
+    "ano_lancamento": 1969,
+    "banda": "The Beatles",
+    "musicas": [
+      {"titulo": "Come Together", "duracao": "4:20"},
+      {"titulo": "Something", "duracao": "3:03"},
+      {"titulo": "Maxwell's Silver Hammer", "duracao": "3:27"}
+    ]
+  },
+  {
+    "titulo": "A Night at the Opera",
+    "ano_lancamento": 1975,
+    "banda": "Queen",
+    "musicas": [
+      {"titulo": "Bohemian Rhapsody", "duracao": "5:55"},
+      {"titulo": "You're My Best Friend", "duracao": "2:50"},
+      {"titulo": "'39", "duracao": "3:31"}
+    ]
+  },
+  {
+    "titulo": "Let It Bleed",
+    "ano_lancamento": 1969,
+    "banda": "The Rolling Stones",
+    "musicas": [
+      {"titulo": "Gimme Shelter", "duracao": "4:30"},
+      {"titulo": "Love in Vain", "duracao": "4:19"},
+      {"titulo": "Country Honk", "duracao": "3:07"}
+    ]
+  },
+  {
+    "titulo": "Nevermind",
+    "ano_lancamento": 1991,
+    "banda": "Nirvana",
+    "musicas": [
+      {"titulo": "Smells Like Teen Spirit", "duracao": "5:01"},
+      {"titulo": "In Bloom", "duracao": "4:14"},
+      {"titulo": "Come as You Are", "duracao": "3:39"}
+    ]
+  },
+  {
+    "titulo": "The Dark Side of the Moon",
+    "ano_lancamento": 1973,
+    "banda": "Pink Floyd",
+    "musicas": [
+      {"titulo": "Speak to Me", "duracao": "1:07"},
+      {"titulo": "Breathe", "duracao": "2:43"},
+      {"titulo": "On the Run", "duracao": "3:30"}
+    ]
+  },
+  {
+    "titulo": "Highway to Hell",
+    "ano_lancamento": 1979,
+    "banda": "AC/DC",
+    "musicas": [
+      {"titulo": "Highway to Hell", "duracao": "3:28"},
+      {"titulo": "Girls Got Rhythm", "duracao": "3:23"},
+      {"titulo": "Walk All Over You", "duracao": "5:08"}
+    ]
+  },
+  {
+    "titulo": "Appetite for Destruction",
+    "ano_lancamento": 1987,
+    "banda": "Guns N' Roses",
+    "musicas": [
+      {"titulo": "Welcome to the Jungle", "duracao": "4:31"},
+      {"titulo": "Sweet Child o' Mine", "duracao": "5:56"},
+      {"titulo": "Paradise City", "duracao": "6:46"}
+    ]
+  },
+  {
+    "titulo": "Metallica",
+    "ano_lancamento": 1991,
+    "banda": "Metallica",
+    "musicas": [
+      {"titulo": "Enter Sandman", "duracao": "5:29"},
+      {"titulo": "Sad but True", "duracao": "5:24"},
+      {"titulo": "The Unforgiven", "duracao": "6:27"}
+    ]
+  }
+]

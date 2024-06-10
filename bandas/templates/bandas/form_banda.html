@@ -1,0 +1,11 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h2>{{ form.instance.pk|yesno:"Editar Banda,Nova Banda" }}</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'bandas:bandas_list' %}">Cancelar</a>
+{% endblock %}

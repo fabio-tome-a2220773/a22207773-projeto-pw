@@ -1,0 +1,20 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'autenticacao/css/styles.css' %}">
+</head>
+<div class="user-info">
+    <h3>Bem-vindo, {{ request.user.first_name }} {{ request.user.last_name }}</h3>
+    <div class="info-section">
+        <h4>Informações do Utilizador</h4>
+        <ul>
+            <li><strong>Username:</strong> {{ request.user.username }}</li>
+            <li><strong>Email:</strong> {{ request.user.email }}</li>
+        </ul>
+    </div>
+    <div class="edit-links">
+        <a href="{% url 'bandas:bandas_list' %}">Editar as Bandas</a>
+        <a href="{% url 'LIG:index' %}">Editar os Cursos</a>
+        <a href="{% url 'artigos:layout' %}">Editar Artigos</a>
+        <a href="{% url 'autenticacao:logout' %}">Logout</a>
+    </div>
+</div>

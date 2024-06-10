@@ -1,0 +1,21 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>Artigos de {{ autor.nome }}</h2>
+    <ul class="list-group">
+        {% for artigo in artigos %}
+            <li class="list-group-item">
+                <h5>{{ artigo.titulo }}</h5>
+                <p>{{ artigo.texto }}</p>
+                <small>Autor: {{ artigo.autor.nome }}</small>
+                {% if request.user.is_authenticated %}
+                    <div>
+                        <a href="{% url 'artigos:editar_artigo' artigo.id %}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{% url 'artigos:excluir_artigo' artigo.id %}" class="btn btn-sm btn-danger">Excluir</a>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

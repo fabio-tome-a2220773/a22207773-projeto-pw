@@ -1,0 +1,33 @@
+{% extends 'LIG/layout.html' %}
+
+{% block title %}Detalhes do Curso{% endblock %}
+
+{% block style %}
+    .curso-detail {
+        color: #007bff;
+        border: 1px solid #007bff;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+{% endblock %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>{{ curso.nome }}</h2>
+<div class="curso-detail">
+    <p>{{ curso.apresentacao }}</p>
+    <p><strong>Objetivos:</strong> {{ curso.objetivos }}</p>
+    <p><strong>Competências:</strong> {{ curso.competencias }}</p>
+</div>
+{% if request.user.is_authenticated %}
+    <a href="{% url 'LIG:edita_curso' curso.id %}"><button>Editar Curso</button></a>
+    <a href="{% url 'LIG:apaga_curso' curso.id %}" onclick="return confirm('Tem certeza que deseja apagar este curso?');"><button>Apagar Curso</button></a>
+{% endif %}
+<h3>Disciplinas</h3>
+<ul>
+    {% for disciplina in disciplinas %}
+        <li><a href="{% url 'LIG:disciplina_detail' disciplina.id %}">{{ disciplina.nome }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'LIG:index' %}">Voltar</a>
+{% endblock %}
