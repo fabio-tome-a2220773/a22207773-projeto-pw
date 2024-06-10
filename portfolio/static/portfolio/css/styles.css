@@ -1,6 +1,4 @@
-/* static/portfolio/css/styles.css */
 
-/* Variáveis para cores */
 :root {
     --primary-color: #007BFF;
     --secondary-color: #28a745;
@@ -39,7 +37,7 @@ nav ul {
 nav ul.nav-links {
     display: flex;
     align-items: center;
-    margin-right: auto; /* Adiciona espaçamento à direita para empurrar os ícones de login e clima */
+    margin-right: auto;
 }
 
 nav ul.nav-links li {
@@ -59,7 +57,7 @@ nav ul.nav-links li a:hover {
 nav ul.nav-actions {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Garante que as ações de navegação estão à direita */
+    margin-left: auto;
 }
 
 nav ul.nav-actions li {
@@ -67,10 +65,10 @@ nav ul.nav-actions li {
 }
 
 .weather-icon img {
-    width: 20px; /* Reduz o tamanho do ícone do clima */
-    height: 20px; /* Reduz o tamanho do ícone do clima */
+    width: 20px;
+    height: 20px;
     display: block;
-    margin-left: auto; /* Move o ícone para a direita */
+    margin-left: auto;
 }
 
 .btn-login img.login-image {
